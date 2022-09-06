@@ -114,9 +114,13 @@ async function initState(
   };
 
   ptyProcess.onOpen(() => {
-    docsService.update(doc.uri, { status: 'connected' });
     refreshTitle();
     removeInitCommand();
+  });
+
+  ptyProcess.onData(() => {
+    console.log('done');
+    docsService.update(doc.uri, { status: 'connected' });
   });
 
   ptyProcess.onExit(event => {
@@ -130,7 +134,7 @@ async function initState(
     // We can look up how the terminal in vscode handles this problem, since in the scenario
     // described above they do close the tab correctly.
     if (event.exitCode === 0) {
-      docsService.close(doc.uri);
+      // docsService.close(doc.uri);
     }
   });
 

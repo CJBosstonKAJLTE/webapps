@@ -20,12 +20,14 @@ import { Close as CloseIcon } from 'design/Icon';
 import { ButtonIcon, Text } from 'design';
 
 import { useTabDnD } from './useTabDnD';
+import LinearProgress from 'teleterm/ui/components/LinearProgress';
 
 type TabItemProps = {
   index?: number;
   name?: string;
   active?: boolean;
   closeTabTooltip?: string;
+  isLoading?: boolean;
   onClick?(): void;
   onClose?(): void;
   onMoved?(oldIndex: number, newIndex: number): void;
@@ -40,6 +42,7 @@ export function TabItem(props: TabItemProps) {
     onClose,
     index,
     onMoved,
+    isLoading,
     onContextMenu,
     closeTabTooltip,
   } = props;
@@ -70,6 +73,7 @@ export function TabItem(props: TabItemProps) {
       <Title color="inherit" fontWeight={700} fontSize="12px">
         {name}
       </Title>
+      {isLoading && <LinearProgress />}
       {onClose && (
         <ButtonIcon
           size={0}
@@ -103,6 +107,7 @@ const StyledTabItem = styled.div(({ theme, active, dragging, canDrag }) => {
       color: theme.colors.primary.contrastText,
       transition: 'color .3s',
     },
+    position: 'relative',
   };
 
   if (active) {

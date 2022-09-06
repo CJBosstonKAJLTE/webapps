@@ -29,7 +29,7 @@ export function useReconnect(doc: types.DocumentTshNode) {
   const cluster = ctx.clustersService.findRootClusterByResource(doc.serverUri);
 
   function markDocumentAsConnected() {
-    workspaceDocumentsService.update(doc.uri, { status: 'connected' });
+    // workspaceDocumentsService.update(doc.uri, { status: 'connected' });
   }
 
   useEffect(() => {

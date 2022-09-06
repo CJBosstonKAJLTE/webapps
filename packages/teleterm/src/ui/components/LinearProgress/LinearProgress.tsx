@@ -40,7 +40,7 @@ const StyledProgress = styled.div`
   display: block;
   height: 1px;
   z-index: 0;
-  background-color: #222c59;
+  //background-color: #222c59;
 
   .parent-bar-2 {
     position: absolute;

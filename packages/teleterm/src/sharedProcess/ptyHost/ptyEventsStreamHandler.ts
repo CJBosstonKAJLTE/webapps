@@ -73,6 +73,9 @@ export class PtyEventsStreamHandler {
 
   private handleStreamError(error: Error): void {
     this.logger.error(`stream has ended with error`, error);
+    this.stream.write(
+      new PtyServerEvent().setData(new PtyEventData().setMessage(error.message))
+    );
     this.cleanResources();
   }
 
