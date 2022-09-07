@@ -16,9 +16,9 @@ limitations under the License.
 
 import React from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
-import theme from './../packages/design/src/theme';
+import { theme } from 'design/theme';
 import DefaultThemeProvider from './../packages/design/src/ThemeProvider';
-import Box from './../packages/design/src/Box';
+import { Box } from 'design/Box';
 import TeletermThemeProvider from './../packages/teleterm/src/ui/ThemeProvider';
 
 // wrap each story with theme provider

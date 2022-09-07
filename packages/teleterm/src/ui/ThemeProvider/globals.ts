@@ -21,7 +21,9 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-family: ${props => props.theme.font};
-    ${props => props.theme.typography.body1};
+    font-weight: ${props => props.theme.typography.body1.fontWeight};
+    line-height: ${props => props.theme.typography.body1.lineHeight};
+    font-size: ${props => props.theme.typography.body1.fontSize};
   }
 
   body {

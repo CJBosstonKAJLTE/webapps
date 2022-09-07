@@ -25,12 +25,19 @@ import {
   blueGrey,
   yellow,
 } from 'design/theme/palette';
-import typography, { fontSizes, fontWeights } from 'design/theme/typography';
+import { fontSizes, fontWeights, typography } from 'design/theme/typography';
+
+import type { Colors, Theme } from 'design/theme/theme';
 
 const space = [0, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80];
 const contrastThreshold = 3;
 
-const colors = {
+interface ExtendedColors extends Colors {
+  inverse: string;
+  progressBarColor: string;
+}
+
+const colors: ExtendedColors = {
   // missing
   inverse: '#B0BEC5',
   progressBarColor: '#00BFA5',
@@ -114,7 +121,7 @@ const borders = [
   '32px solid',
 ];
 
-const theme = {
+export const theme: Theme = {
   colors,
   typography,
   font: fonts.sansSerif,
@@ -129,8 +136,6 @@ const theme = {
   // disabled media queries for styled-system
   breakpoints: [],
 };
-
-export default theme;
 
 export function getContrastText(background) {
   // Use the same logic as

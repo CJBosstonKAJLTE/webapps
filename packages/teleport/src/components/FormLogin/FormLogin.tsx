@@ -35,7 +35,7 @@ import {
 } from 'shared/services';
 import { useAttempt, useRefAutoFocus } from 'shared/hooks';
 import Validation, { Validator } from 'shared/components/Validation';
-import FieldInput from 'shared/components/FieldInput';
+import { FieldInput } from 'shared/components/FieldInput';
 import FieldSelect from 'shared/components/FieldSelect';
 import {
   requiredToken,

@@ -1,14 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ButtonBorder, Text } from 'design';
-import Menu, { MenuItem } from 'design/Menu';
+import { Menu, MenuItem } from 'design/Menu';
 import { CarrotDown } from 'design/Icon';
+
+import { space } from 'design/system';
 
 import cfg from 'teleport/config';
 import { AwsRole } from 'teleport/services/apps';
 
-export default class AwsLaunchButton extends React.Component<Props> {
-  anchorEl = React.createRef();
+import type { SpaceProps } from 'design/system';
+
+export class AwsLaunchButton extends React.Component<Props> {
+  anchorEl = React.createRef<HTMLButtonElement>();
 
   state = {
     open: false,
@@ -31,7 +35,7 @@ export default class AwsLaunchButton extends React.Component<Props> {
         <ButtonBorder
           width="88px"
           size="small"
-          setRef={e => (this.anchorEl = e)}
+          setRef={this.anchorEl}
           onClick={this.onOpen}
         >
           LAUNCH
@@ -51,7 +55,7 @@ export default class AwsLaunchButton extends React.Component<Props> {
             horizontal: 'right',
           }}
           getContentAnchorEl={null}
-          anchorEl={this.anchorEl}
+          anchorEl={this.anchorEl.current}
           open={open}
           onClose={this.onClose}
         >
@@ -122,7 +126,7 @@ type Props = {
   publicAddr: string;
 };
 
-const StyledMenuItem = styled(MenuItem)(
+const StyledMenuItem = styled(MenuItem)<SpaceProps>(
   ({ theme }) => `
   color: ${theme.colors.grey[400]};
   font-size: 12px;
@@ -136,5 +140,6 @@ const StyledMenuItem = styled(MenuItem)(
     border-bottom: none;
     margin-bottom: 8px;
   }
+  ${space}
 `
 );

@@ -19,8 +19,7 @@ import styled from 'styled-components';
 import 'react-day-picker/lib/style.css';
 import { ButtonOutlined } from 'design';
 import { CarrotDown } from 'design/Icon';
-import Menu from 'design/Menu';
-import defaultTheme from 'design/theme';
+import { Menu } from 'design/Menu';
 
 type Props = {
   title: string;
@@ -77,7 +76,7 @@ export default class ButtonOptions extends React.Component<Props, State> {
         <Menu
           menuListCss={menuListCss}
           anchorEl={this.state.anchorEl}
-          open={open}
+          open={this.state.open}
           onClose={this.onClose}
           anchorOrigin={{
             vertical: 'center',
@@ -88,7 +87,7 @@ export default class ButtonOptions extends React.Component<Props, State> {
             horizontal: 'center',
           }}
         >
-          {open && this.renderItems(props.children)}
+          {this.state.open && this.renderItems(props.children)}
         </Menu>
       </>
     );
@@ -124,7 +123,3 @@ const StyledButton = styled(ButtonOutlined)`
   padding: 0 40px 0 24px;
   width: auto;
 `;
-
-StyledButton.defaultProps = {
-  theme: defaultTheme,
-};

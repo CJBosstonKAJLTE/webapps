@@ -19,7 +19,7 @@ import styled from 'styled-components';
 import { Text, ButtonPrimary, Flex, Box, Link, Image } from 'design';
 import { Danger } from 'design/Alert';
 import { ArrowBack } from 'design/Icon';
-import FieldInput from 'shared/components/FieldInput';
+import { FieldInput } from 'shared/components/FieldInput';
 import Validation, { Validator } from 'shared/components/Validation';
 import {
   requiredField,

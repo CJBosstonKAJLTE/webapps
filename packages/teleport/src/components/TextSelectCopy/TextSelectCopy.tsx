@@ -35,7 +35,7 @@ export default function TextSelectCopy({
     selectElementContent(ref.current);
   }
 
-  const boxStyles = bash
+  const boxStyles: React.CSSProperties = bash
     ? {
         overflow: 'auto',
         whiteSpace: 'pre',

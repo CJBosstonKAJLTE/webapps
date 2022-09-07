@@ -17,7 +17,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { debounce } from 'lodash';
-import { space, width, color, height } from 'styled-system';
+import { space, width, color, height } from 'design/system';
 
 export default function ClusterSearch(props: Props) {
   const ref = React.useRef<HTMLInputElement>();

@@ -115,7 +115,11 @@ const Progress = styled.div`
   width: 100%;
 `;
 
-const ProgressStatus = styled.div`
+interface ProgressStatusProps {
+  isFailed: boolean;
+}
+
+const ProgressStatus = styled.div<ProgressStatusProps>`
   font-size: 12px;
   height: 24px;
   line-height: 24px;
@@ -124,7 +128,12 @@ const ProgressStatus = styled.div`
   color: ${props => (props.isFailed ? colors.error : colors.terminal)};
 `;
 
-const ProgressIndicator = styled.div`
+interface ProgressIndicatorProps {
+  progress: number;
+  isCompleted: boolean;
+}
+
+const ProgressIndicator = styled.div<ProgressIndicatorProps>`
   display: flex;
   align-items: center;
   word-break: break-word;

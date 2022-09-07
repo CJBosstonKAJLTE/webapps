@@ -88,7 +88,7 @@ class TeleportContext implements types.Context {
 
     return {
       audit: userContext.getEventAccess().list,
-      recordings: userContext.getSessionsAccess().list,
+      recordings: true,
       authConnector: userContext.getConnectorAccess().list,
       roles: userContext.getRoleAccess().list,
       trustedClusters: userContext.getTrustedClusterAccess().list,

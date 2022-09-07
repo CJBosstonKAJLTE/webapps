@@ -16,8 +16,8 @@ limitations under the License.
 
 import styled from 'styled-components';
 
-import Box from './../Box';
-import theme from './../theme';
+import { Box } from '../Box';
+import { theme } from '../theme';
 
 const Card = styled(Box)`
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.24);

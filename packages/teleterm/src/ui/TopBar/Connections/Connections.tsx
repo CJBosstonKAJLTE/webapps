@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
-import Popover from 'design/Popover';
+import { Popover } from 'design/Popover';
 import styled from 'styled-components';
 import { Box } from 'design';
 

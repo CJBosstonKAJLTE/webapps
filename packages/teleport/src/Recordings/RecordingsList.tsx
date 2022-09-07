@@ -20,7 +20,7 @@ import Table, { Cell, TextCell } from 'design/DataTable';
 import { dateTimeMatcher } from 'design/utils/match';
 import { displayDateTime } from 'shared/services/loc';
 
-import Icon, * as Icons from 'design/Icon/Icon';
+import * as Icons from 'design/Icon/Icon';
 
 import cfg from 'teleport/config';
 import { Recording, RecordingType } from 'teleport/services/recordings';
@@ -114,7 +114,7 @@ const renderIconCell = (type: RecordingType) => {
 
   return (
     <Cell>
-      <Icon p={1} mr={3} fontSize={3} as={icon} />
+      <Icons.Icon p={1} mr={3} fontSize={3} as={icon} />
     </Cell>
   );
 };

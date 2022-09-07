@@ -29,7 +29,7 @@ import Dialog, {
   DialogFooter,
   DialogTitle,
 } from 'design/Dialog';
-import FieldInput from 'shared/components/FieldInput';
+import { FieldInput } from 'shared/components/FieldInput';
 import Validation, { Validator } from 'shared/components/Validation';
 import { requiredField } from 'shared/components/Validation/rules';
 

@@ -21,7 +21,7 @@ import PropTypes from 'prop-types';
 import { Text } from 'design';
 
 import TopNavItem from '../TopNavItem';
-import Menu from '../../Menu/Menu';
+import { Menu } from '../../Menu/Menu';
 
 class TopNavUserMenu extends React.Component {
   static displayName = 'TopNavMenu';

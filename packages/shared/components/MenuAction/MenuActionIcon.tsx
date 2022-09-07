@@ -15,20 +15,25 @@ limitations under the License.
 */
 
 import React from 'react';
-import Menu from 'design/Menu';
+
+import { Menu } from 'design/Menu';
 import { ButtonIcon } from 'design';
 import { Ellipsis } from 'design/Icon';
 
-import { MenuProps, AnchorProps } from './types';
+import { MenuProps } from 'design/Menu/Menu';
 
-export default class MenuActionIcon extends React.Component<Props> {
+import { AnchorProps } from './types';
+
+export default class MenuActionIcon extends React.Component<
+  React.PropsWithChildren<Props>
+> {
   anchorEl = null;
 
   state = {
     open: false,
   };
 
-  constructor(props: Props) {
+  constructor(props: React.PropsWithChildren<Props>) {
     super(props);
     this.state.open = props.defaultOpen || false;
   }

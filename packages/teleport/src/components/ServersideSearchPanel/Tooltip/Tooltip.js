@@ -18,7 +18,7 @@ import React, { createRef } from 'react';
 import styled from 'styled-components';
 import { Box } from 'design';
 import { Info } from 'design/Icon';
-import Popover from 'design/Popover';
+import { Popover } from 'design/Popover';
 
 export default class Tooltip extends React.Component {
   anchorEl = createRef();

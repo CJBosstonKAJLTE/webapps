@@ -16,7 +16,6 @@ limitations under the License.
 
 import styled from 'styled-components';
 import { Flex, Text } from 'design';
-import defaultTheme from 'design/theme';
 
 /**
  * Header
@@ -69,7 +68,6 @@ const FeatureBox = styled(Flex)`
 `;
 
 FeatureBox.defaultProps = {
-  theme: defaultTheme,
   px: 6,
 };
 

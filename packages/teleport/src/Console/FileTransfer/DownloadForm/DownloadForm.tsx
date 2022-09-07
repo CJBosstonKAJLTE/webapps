@@ -18,12 +18,12 @@ import React from 'react';
 
 import { Flex } from 'design';
 
-import * as Elements from './../Elements';
+import * as Elements from '../Elements';
 
 export default class FileDownloadSelector extends React.Component<{
   onDownload: (path: string) => void;
 }> {
-  inputRef = React.createRef();
+  inputRef = React.createRef<HTMLInputElement>();
 
   state = {
     path: '~/',
@@ -69,7 +69,7 @@ export default class FileDownloadSelector extends React.Component<{
         <Flex>
           <Elements.Input
             onChange={this.onChangePath}
-            ref={e => (this.inputRef = e)}
+            ref={this.inputRef}
             value={path}
             mb={0}
             autoFocus

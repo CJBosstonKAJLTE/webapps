@@ -19,7 +19,7 @@ import styled from 'styled-components';
 
 import { ButtonPrimary, Box, Flex, Text } from '../';
 
-import Popover from './../Popover';
+import { Popover } from './index';
 
 export default {
   title: 'Design/Popover',

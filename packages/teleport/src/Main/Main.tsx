@@ -23,7 +23,7 @@ import { Failed } from 'design/CardError';
 import { Redirect, Switch, Route } from 'teleport/components/Router';
 import CatchError from 'teleport/components/CatchError';
 import cfg from 'teleport/config';
-import SideNav from 'teleport/SideNav';
+import { SideNav } from 'teleport/SideNav';
 import TopBar from 'teleport/TopBar';
 import getFeatures from 'teleport/features';
 import localStorage from 'teleport/services/localStorage';

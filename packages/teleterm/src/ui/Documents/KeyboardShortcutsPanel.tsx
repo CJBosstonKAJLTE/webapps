@@ -1,11 +1,14 @@
 import React from 'react';
-import { Text } from 'design';
-
 import styled from 'styled-components';
+
+import { Text } from 'design';
+import { color } from 'design/system';
 
 import Document from 'teleterm/ui/Document';
 import { useKeyboardShortcutFormatters } from 'teleterm/ui/services/keyboardShortcuts';
 import { KeyboardShortcutType } from 'teleterm/services/config';
+
+import type { ColorProps } from 'design/system';
 
 export function KeyboardShortcutsPanel() {
   const { getShortcut } = useKeyboardShortcutFormatters();
@@ -63,11 +66,12 @@ function Entry(props: { title: string; shortcut: string }) {
   );
 }
 
-const MonoText = styled(Text)`
+const MonoText = styled(Text)<ColorProps>`
   font-family: ${props => props.theme.fonts.mono};
   width: fit-content;
   opacity: 0.7;
   border-radius: 4px;
+  ${color};
 `;
 
 const Grid = styled.div`

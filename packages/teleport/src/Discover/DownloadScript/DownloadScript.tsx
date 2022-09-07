@@ -33,7 +33,7 @@ import {
   ButtonBlueText,
 } from '../Shared';
 
-import { useDownloadScript } from './useDownloadScript';
+import { PollState, useDownloadScript } from './useDownloadScript';
 
 import type { State, CountdownTime } from './useDownloadScript';
 
@@ -148,7 +148,11 @@ function formatTime({ minutes, seconds }: CountdownTime) {
   return `${formattedMinutes}:${formattedSeconds} ${timeNotation}`;
 }
 
-const ScriptBox = styled(Box)`
+interface ScriptBoxProps {
+  pollState: PollState;
+}
+
+const ScriptBox = styled(Box)<ScriptBoxProps>`
   max-width: 800px;
   background-color: rgba(255, 255, 255, 0.05);
   border: 2px solid

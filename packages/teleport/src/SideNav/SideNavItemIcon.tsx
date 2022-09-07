@@ -15,16 +15,17 @@ limitations under the License.
 */
 
 import styled from 'styled-components';
-import Icon from 'design/Icon';
+import { Icon } from 'design/Icon';
 
-const SideNavItemIcon = styled(Icon)``;
+import type { FontSizeProps, SpaceProps } from 'design/system';
 
-SideNavItemIcon.displayName = 'SideNavItemIcon';
+export type SideNavItemIconProps = FontSizeProps & SpaceProps;
+
+export const SideNavItemIcon = styled(Icon)<SideNavItemIconProps>``;
+
 SideNavItemIcon.defaultProps = {
   mr: 3,
   ml: -6,
   fontSize: '16px',
   color: 'inherit',
 };
-
-export default SideNavItemIcon;

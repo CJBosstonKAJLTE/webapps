@@ -18,7 +18,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Table, { Cell } from 'design/DataTable';
 import { ButtonBorder } from 'design';
-import Icon, * as Icons from 'design/Icon/Icon';
+import * as Icons from 'design/Icon/Icon';
 
 import cfg from 'teleport/config';
 import { Session, Participant, SessionKind } from 'teleport/services/session';
@@ -91,7 +91,7 @@ const renderIconCell = (kind: SessionKind) => {
 
   return (
     <Cell>
-      <Icon p={1} mr={3} fontSize={3} as={icon} />
+      <Icons.Icon p={1} mr={3} fontSize={3} as={icon} />
     </Cell>
   );
 };

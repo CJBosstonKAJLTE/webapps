@@ -53,7 +53,13 @@ export function ClusterItem(props: ClusterItemProps) {
   );
 }
 
-const StyledListItem = styled(ListItem)`
+interface StyledListItemProps {
+  isLeaf: boolean;
+  isActive: boolean;
+  isSelected: boolean;
+}
+
+const StyledListItem = styled(ListItem)<StyledListItemProps>`
   padding-left: ${props => (props.isLeaf ? '32px' : null)};
   background: ${getBackgroundColor};
 

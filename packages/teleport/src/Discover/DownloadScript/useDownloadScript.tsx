@@ -189,7 +189,7 @@ type Props = {
   props: AgentStepProps;
 };
 
-type PollState = 'polling' | 'success' | 'error';
+export type PollState = 'polling' | 'success' | 'error';
 
 export type CountdownTime = {
   minutes: number;

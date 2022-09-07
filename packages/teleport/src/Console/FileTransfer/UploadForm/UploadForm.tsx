@@ -19,15 +19,15 @@ import styled from 'styled-components';
 
 import { colors } from 'teleport/Console/colors';
 
-import * as Elements from './../Elements';
+import * as Elements from '../Elements';
 
 type PropType = {
   onUpload: (location: string, filename: string, blob: Blob) => void;
 };
 
 export default class UploadForm extends React.Component<PropType> {
-  refDropzone = React.createRef<HTMLElement>();
-  refInput = React.createRef<HTMLElement>();
+  refDropzone = React.createRef<HTMLDivElement>();
+  refInput = React.createRef<HTMLInputElement>();
   refFileSelector = React.createRef<HTMLInputElement>();
 
   state = {

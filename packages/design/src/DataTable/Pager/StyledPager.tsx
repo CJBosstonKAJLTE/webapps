@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
-import Icon from 'design/Icon';
+import { margin } from 'design/system';
 
-export const StyledArrowBtn = styled.button`
+import { Icon } from 'design/Icon';
+
+import type { MarginProps } from 'design/system';
+
+export const StyledArrowBtn = styled.button<MarginProps>`
   background: none;
   border: none;
   cursor: pointer;
+
+  ${margin}
 
   ${Icon} {
     font-size: 20px;

@@ -18,8 +18,8 @@ exports[`snapshot tests 1`] = `
   padding: 0 16px;
   outline: none;
   width: 100%;
-  color: #324148;
   background-color: #FFFFFF;
+  color: #324148;
   margin-top: 4px;
   border: 2px solid #ff1744;
   padding: 10px 14px;
@@ -44,13 +44,15 @@ exports[`snapshot tests 1`] = `
   font-weight: 500;
   text-transform: uppercase;
   width: 100%;
-  margin-bottom: 0px;
+  margin-bottom: 0;
+  margin-bottom: 0;
+  font-size: 10px;
 }
 
 .c2 {
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 0px;
+  margin: 0;
 }
 
 <div>

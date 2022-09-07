@@ -15,17 +15,21 @@ limitations under the License.
 */
 
 import React, { useImperativeHandle, useRef, useState } from 'react';
-import styled from 'styled-components';
+import styled, { css, useTheme } from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import Menu, { MenuItem } from 'design/Menu';
+import { Menu, MenuItem } from 'design/Menu';
 import { space } from 'design/system';
 
 import { ButtonBorder, Flex, Indicator } from 'design';
 import { CarrotDown } from 'design/Icon';
 
+import { Theme } from 'design/theme';
+
 import { useAsync, Attempt } from 'shared/hooks/useAsync';
 
 import { MenuLoginProps, LoginItem, MenuLoginHandle } from './types';
+
+import type { SpaceProps } from 'design/system';
 
 export const MenuLogin = React.forwardRef<MenuLoginHandle, MenuLoginProps>(
   (props, ref) => {
@@ -36,7 +40,7 @@ export const MenuLogin = React.forwardRef<MenuLoginHandle, MenuLoginProps>(
       required = true,
       width,
     } = props;
-    const anchorRef = useRef<HTMLElement>();
+    const anchorRef = useRef<HTMLButtonElement>();
     const [isOpen, setIsOpen] = useState(false);
     const [getLoginItemsAttempt, runGetLoginItems] = useAsync(() =>
       Promise.resolve().then(() => props.getLoginItems())
@@ -117,7 +121,8 @@ const LoginItemList = ({
   placeholder: string;
   width?: string;
 }) => {
-  const content = getLoginItemListContent(getLoginItemsAttempt, onClick);
+  const theme = useTheme();
+  const content = getLoginItemListContent(getLoginItemsAttempt, onClick, theme);
 
   return (
     <Flex flexDirection="column" width={width}>
@@ -137,16 +142,17 @@ const LoginItemList = ({
 
 function getLoginItemListContent(
   getLoginItemsAttempt: Attempt<LoginItem[]>,
-  onClick: (e: React.MouseEvent<HTMLAnchorElement>, login: string) => void
+  onClick: (e: React.MouseEvent<HTMLAnchorElement>, login: string) => void,
+  theme: Theme
 ) {
   switch (getLoginItemsAttempt.status) {
     case '':
     case 'processing':
       return (
         <Indicator
-          css={({ theme }) => `
+          css={`
             align-self: center;
-            color: ${theme.colors.secondary.dark}
+            color: ${theme.colors.secondary.dark};
           `}
         />
       );
@@ -200,25 +206,25 @@ const StyledMenuItem = styled(MenuItem)(
 `
 );
 
-const Input = styled.input(
-  ({ theme }) => `
-  background: ${theme.colors.subtle};
-  border: 1px solid ${theme.colors.subtle};
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: ${theme.colors.grey[900]};
-  height: 32px;
-  outline: none;
+const Input = styled.input<SpaceProps>(
+  ({ theme }) => css`
+    background: ${theme.colors.subtle};
+    border: 1px solid ${theme.colors.subtle};
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: ${theme.colors.grey[900]};
+    height: 32px;
+    outline: none;
 
-  &:focus {
-    background: ${theme.colors.light};
-    border 1px solid ${theme.colors.link};
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .24);
-  }
+    &:focus {
+      background: ${theme.colors.light};
+      border: 1px solid ${theme.colors.link};
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.24);
+    }
 
-  ::placeholder {
-    color: ${theme.colors.grey[100]};
-  }
-`,
+    ::placeholder {
+      color: ${theme.colors.grey[100]};
+    }
+  `,
   space
 );

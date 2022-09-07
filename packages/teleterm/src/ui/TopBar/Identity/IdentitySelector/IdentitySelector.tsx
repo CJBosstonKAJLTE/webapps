@@ -47,7 +47,11 @@ export const IdentitySelector = forwardRef<
   );
 });
 
-const Container = styled.button`
+interface ContainerProps {
+  isOpened: boolean;
+}
+
+const Container = styled.button<ContainerProps>`
   display: flex;
   font-family: inherit;
   background: inherit;

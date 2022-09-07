@@ -18,7 +18,8 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { debounce } from 'lodash';
 import { Box, Flex } from 'design';
-import { color, height, space, width } from 'styled-system';
+
+import { color, height, space, width } from 'design/system';
 
 import { useAppContext } from 'teleterm/ui/appContextProvider';
 
@@ -43,8 +44,8 @@ function QuickInput() {
     autocompleteResult.kind === 'autocomplete.partial-match';
   const refInput = useRef<HTMLInputElement>();
   const measuringInputRef = useRef<HTMLSpanElement>();
-  const refList = useRef<HTMLElement>();
-  const refContainer = useRef<HTMLElement>();
+  const refList = useRef<HTMLDivElement>();
+  const refContainer = useRef<HTMLDivElement>();
   const [measuredInputTextWidth, setMeasuredInputTextWidth] =
     useState<number>();
 
@@ -184,7 +185,11 @@ const MeasuringInput = styled.span`
   visibility: hidden;
 `;
 
-const Input = styled.input(props => {
+interface InputProps {
+  isOpened: boolean;
+}
+
+const Input = styled.input<InputProps>(props => {
   const { theme } = props;
   return {
     height: '100%',

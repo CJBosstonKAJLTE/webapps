@@ -15,12 +15,20 @@ limitations under the License.
 */
 
 import styled from 'styled-components';
-import defaultTheme from 'design/theme';
+
 import { color } from 'design/system';
 
-const fromTheme = ({ $nested = false, theme = defaultTheme }) => {
+import type { PropsWithTheme } from 'design/theme';
+
+import type { ColorProps } from 'design/system';
+import type { Property } from 'csstype';
+
+const fromTheme = ({
+  $nested = false,
+  theme,
+}: PropsWithTheme<SideNavItemProps>) => {
   const css = {
-    position: 'relative',
+    position: 'relative' as Property.Position,
     fontSize: '12px',
     fontWeight: theme.regular,
     fontFamily: theme.font,
@@ -60,7 +68,13 @@ const fromTheme = ({ $nested = false, theme = defaultTheme }) => {
   return css;
 };
 
-const SideNavItem = styled.div`
+interface SideNavItemBaseProps {
+  $nested?: boolean;
+}
+
+export type SideNavItemProps = SideNavItemBaseProps & ColorProps;
+
+export const SideNavItem = styled.div<SideNavItemProps>`
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -75,5 +89,3 @@ const SideNavItem = styled.div`
   ${fromTheme}
   ${color}
 `;
-
-export default SideNavItem;

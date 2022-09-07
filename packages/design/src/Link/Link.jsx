@@ -17,16 +17,11 @@ limitations under the License.
 import React from 'react';
 import styled from 'styled-components';
 
-import defaultTheme from 'design/theme';
 import { space, color } from 'design/system';
 
 function Link({ ...props }) {
   return <StyledButtonLink {...props} />;
 }
-
-Link.defaultProps = {
-  theme: defaultTheme,
-};
 
 Link.displayName = 'Link';
 

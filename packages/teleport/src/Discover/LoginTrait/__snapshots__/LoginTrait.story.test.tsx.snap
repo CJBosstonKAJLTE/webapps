@@ -11,12 +11,16 @@ exports[`empty state 1`] = `
   margin-bottom: 16px;
 }
 
-.c11 {
+.c5 {
+  box-sizing: border-box;
+}
+
+.c14 {
   box-sizing: border-box;
   margin-top: 24px;
 }
 
-.c7 {
+.c10 {
   line-height: 1.5;
   margin: 0;
   display: inline-flex;
@@ -44,22 +48,22 @@ exports[`empty state 1`] = `
   margin-top: 8px;
 }
 
-.c7:active {
+.c10:active {
   opacity: 0.56;
 }
 
-.c7:hover,
-.c7:focus {
+.c10:hover,
+.c10:focus {
   background: none;
   text-decoration: underline;
 }
 
-.c7:disabled {
+.c10:disabled {
   background: none;
   color: rgba(255,255,255,0.3);
 }
 
-.c12 {
+.c15 {
   line-height: 1.5;
   margin: 0;
   display: inline-flex;
@@ -87,25 +91,25 @@ exports[`empty state 1`] = `
   width: 165px;
 }
 
-.c12:active {
+.c15:active {
   opacity: 0.56;
 }
 
-.c12:hover,
-.c12:focus {
+.c15:hover,
+.c15:focus {
   background: #651FFF;
 }
 
-.c12:active {
+.c15:active {
   background: #354AA4;
 }
 
-.c12:disabled {
+.c15:disabled {
   background: rgba(255,255,255,0.12);
   color: rgba(255,255,255,0.3);
 }
 
-.c13 {
+.c16 {
   line-height: 1.5;
   margin: 0;
   display: inline-flex;
@@ -133,24 +137,28 @@ exports[`empty state 1`] = `
   width: 165px;
 }
 
-.c13:active {
+.c16:active {
   opacity: 0.56;
 }
 
-.c13:hover,
-.c13:focus {
+.c16:hover,
+.c16:focus {
   background: #2C3A73;
 }
 
-.c13:disabled {
+.c16:disabled {
   background: rgba(255,255,255,0.12);
   color: rgba(255,255,255,0.3);
 }
 
-.c9 {
+.c12 {
   display: inline-block;
   transition: color 0.3s;
   color: #FFFFFF;
+}
+
+.c6 {
+  display: flex;
 }
 
 .c1 {
@@ -158,29 +166,33 @@ exports[`empty state 1`] = `
   text-overflow: ellipsis;
   font-weight: 600;
   font-size: 18px;
-  margin: 0px;
   margin-top: 4px;
   margin-bottom: 4px;
+  margin: 0;
 }
 
 .c2 {
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 0px;
   margin-bottom: 32px;
+  margin: 0;
 }
 
 .c3 {
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 600;
-  margin: 0px;
   margin-bottom: 8px;
+  margin: 0;
 }
 
-.c5 {
-  box-sizing: border-box;
-  display: flex;
+.c8 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.c7 {
   padding: 8px;
   margin-bottom: 4px;
   width: 300px;
@@ -189,30 +201,27 @@ exports[`empty state 1`] = `
   border-radius: 8px;
 }
 
-.c5.disabled {
+.c7.disabled {
   pointer-events: none;
   opacity: 0.5;
 }
 
-.c6 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0px;
+.c9 {
   font-style: italic;
   overflow: visible;
 }
 
-.c8 {
+.c11 {
   line-height: normal;
   padding-left: 4px;
 }
 
-.c10 {
+.c13 {
   font-weight: bold;
   letter-spacing: 4px;
 }
 
-.c10:after {
+.c13:after {
   content: ' ';
 }
 
@@ -239,31 +248,31 @@ exports[`empty state 1`] = `
     class="c4"
   >
     <div
-      class="c5"
+      class="c5 c6 c7"
     >
       <div
-        class="c6"
+        class="c8 c9"
       >
         No OS users added
       </div>
     </div>
     <button
-      class="c7 c8"
+      class="c10 c11"
       kind="text"
     >
       <span
-        class="c9 icon icon-add c10"
+        class="c12 icon icon-add c13"
         color="light"
       />
       Add new OS User
     </button>
   </div>
   <div
-    class="c11"
+    class="c14"
   >
     
     <button
-      class="c12"
+      class="c15"
       disabled=""
       kind="primary"
       width="165px"
@@ -271,11 +280,10 @@ exports[`empty state 1`] = `
       Next
     </button>
     <a
-      class="c13"
+      class="c16"
       href="/web"
       kind="secondary"
       mt="3"
-      theme="[object Object]"
       width="165px"
     >
       Exit
@@ -295,12 +303,16 @@ exports[`empty state with static logins 1`] = `
   margin-bottom: 16px;
 }
 
-.c12 {
+.c5 {
+  box-sizing: border-box;
+}
+
+.c14 {
   box-sizing: border-box;
   margin-top: 24px;
 }
 
-.c8 {
+.c10 {
   line-height: 1.5;
   margin: 0;
   display: inline-flex;
@@ -328,22 +340,22 @@ exports[`empty state with static logins 1`] = `
   margin-top: 8px;
 }
 
-.c8:active {
+.c10:active {
   opacity: 0.56;
 }
 
-.c8:hover,
-.c8:focus {
+.c10:hover,
+.c10:focus {
   background: none;
   text-decoration: underline;
 }
 
-.c8:disabled {
+.c10:disabled {
   background: none;
   color: rgba(255,255,255,0.3);
 }
 
-.c13 {
+.c15 {
   line-height: 1.5;
   margin: 0;
   display: inline-flex;
@@ -371,25 +383,25 @@ exports[`empty state with static logins 1`] = `
   width: 165px;
 }
 
-.c13:active {
+.c15:active {
   opacity: 0.56;
 }
 
-.c13:hover,
-.c13:focus {
+.c15:hover,
+.c15:focus {
   background: #651FFF;
 }
 
-.c13:active {
+.c15:active {
   background: #354AA4;
 }
 
-.c13:disabled {
+.c15:disabled {
   background: rgba(255,255,255,0.12);
   color: rgba(255,255,255,0.3);
 }
 
-.c14 {
+.c16 {
   line-height: 1.5;
   margin: 0;
   display: inline-flex;
@@ -417,24 +429,28 @@ exports[`empty state with static logins 1`] = `
   width: 165px;
 }
 
-.c14:active {
+.c16:active {
   opacity: 0.56;
 }
 
-.c14:hover,
-.c14:focus {
+.c16:hover,
+.c16:focus {
   background: #2C3A73;
 }
 
-.c14:disabled {
+.c16:disabled {
   background: rgba(255,255,255,0.12);
   color: rgba(255,255,255,0.3);
 }
 
-.c10 {
+.c12 {
   display: inline-block;
   transition: color 0.3s;
   color: #FFFFFF;
+}
+
+.c6 {
+  display: flex;
 }
 
 .c1 {
@@ -442,29 +458,27 @@ exports[`empty state with static logins 1`] = `
   text-overflow: ellipsis;
   font-weight: 600;
   font-size: 18px;
-  margin: 0px;
   margin-top: 4px;
   margin-bottom: 4px;
+  margin: 0;
 }
 
 .c2 {
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 0px;
   margin-bottom: 32px;
+  margin: 0;
 }
 
 .c3 {
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 600;
-  margin: 0px;
   margin-bottom: 8px;
+  margin: 0;
 }
 
-.c5 {
-  box-sizing: border-box;
-  display: flex;
+.c7 {
   padding: 8px;
   margin-bottom: 4px;
   width: 300px;
@@ -473,37 +487,37 @@ exports[`empty state with static logins 1`] = `
   border-radius: 8px;
 }
 
-.c5.disabled {
+.c7.disabled {
   pointer-events: none;
   opacity: 0.5;
 }
 
-.c6 {
+.c8 {
   margin-right: 10px;
   accent-color: #512FC9;
 }
 
-.c6:hover {
+.c8:hover {
   cursor: pointer;
 }
 
-.c7 {
+.c9 {
   width: 250px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.c9 {
+.c11 {
   line-height: normal;
   padding-left: 4px;
 }
 
-.c11 {
+.c13 {
   font-weight: bold;
   letter-spacing: 4px;
 }
 
-.c11:after {
+.c13:after {
   content: ' ';
 }
 
@@ -530,67 +544,66 @@ exports[`empty state with static logins 1`] = `
     class="c4"
   >
     <div
-      class="c5 disabled"
+      class="c5 c6 c7 disabled"
     >
       <input
         checked=""
-        class="c6"
+        class="c8"
         id="ubunutu0"
         name="ubunutu"
         type="checkbox"
       />
       <label
-        class="c7"
+        class="c9"
         for="ubunutu0"
       >
         ubunutu
       </label>
     </div>
     <div
-      class="c5 disabled"
+      class="c5 c6 c7 disabled"
     >
       <input
         checked=""
-        class="c6"
+        class="c8"
         id="debian1"
         name="debian"
         type="checkbox"
       />
       <label
-        class="c7"
+        class="c9"
         for="debian1"
       >
         debian
       </label>
     </div>
     <button
-      class="c8 c9"
+      class="c10 c11"
       kind="text"
     >
       <span
-        class="c10 icon icon-add c11"
+        class="c12 icon icon-add c13"
         color="light"
       />
       Add new OS User
     </button>
   </div>
   <div
-    class="c12"
+    class="c14"
   >
     
     <button
-      class="c13"
+      class="c15"
       kind="primary"
       width="165px"
     >
       Next
     </button>
     <a
-      class="c14"
+      class="c16"
       href="/web"
       kind="secondary"
       mt="3"
-      theme="[object Object]"
       width="165px"
     >
       Exit
@@ -759,32 +772,32 @@ exports[`failed 1`] = `
   text-overflow: ellipsis;
   font-weight: 600;
   font-size: 18px;
-  margin: 0px;
   margin-top: 4px;
   margin-bottom: 4px;
+  margin: 0;
 }
 
 .c2 {
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 0px;
   margin-bottom: 32px;
+  margin: 0;
 }
 
 .c3 {
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 600;
-  margin: 0px;
   margin-bottom: 8px;
+  margin: 0;
 }
 
 .c5 {
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 0px;
   margin-top: 16px;
   margin-bottom: 16px;
+  margin: 0;
 }
 
 .c8 {
@@ -851,7 +864,6 @@ exports[`failed 1`] = `
       href="/web"
       kind="secondary"
       mt="3"
-      theme="[object Object]"
       width="165px"
     >
       Exit
@@ -871,12 +883,16 @@ exports[`loaded with static state 1`] = `
   margin-bottom: 16px;
 }
 
-.c12 {
+.c5 {
+  box-sizing: border-box;
+}
+
+.c14 {
   box-sizing: border-box;
   margin-top: 24px;
 }
 
-.c8 {
+.c10 {
   line-height: 1.5;
   margin: 0;
   display: inline-flex;
@@ -904,22 +920,22 @@ exports[`loaded with static state 1`] = `
   margin-top: 8px;
 }
 
-.c8:active {
+.c10:active {
   opacity: 0.56;
 }
 
-.c8:hover,
-.c8:focus {
+.c10:hover,
+.c10:focus {
   background: none;
   text-decoration: underline;
 }
 
-.c8:disabled {
+.c10:disabled {
   background: none;
   color: rgba(255,255,255,0.3);
 }
 
-.c13 {
+.c15 {
   line-height: 1.5;
   margin: 0;
   display: inline-flex;
@@ -947,25 +963,25 @@ exports[`loaded with static state 1`] = `
   width: 165px;
 }
 
-.c13:active {
+.c15:active {
   opacity: 0.56;
 }
 
-.c13:hover,
-.c13:focus {
+.c15:hover,
+.c15:focus {
   background: #651FFF;
 }
 
-.c13:active {
+.c15:active {
   background: #354AA4;
 }
 
-.c13:disabled {
+.c15:disabled {
   background: rgba(255,255,255,0.12);
   color: rgba(255,255,255,0.3);
 }
 
-.c14 {
+.c16 {
   line-height: 1.5;
   margin: 0;
   display: inline-flex;
@@ -993,24 +1009,28 @@ exports[`loaded with static state 1`] = `
   width: 165px;
 }
 
-.c14:active {
+.c16:active {
   opacity: 0.56;
 }
 
-.c14:hover,
-.c14:focus {
+.c16:hover,
+.c16:focus {
   background: #2C3A73;
 }
 
-.c14:disabled {
+.c16:disabled {
   background: rgba(255,255,255,0.12);
   color: rgba(255,255,255,0.3);
 }
 
-.c10 {
+.c12 {
   display: inline-block;
   transition: color 0.3s;
   color: #FFFFFF;
+}
+
+.c6 {
+  display: flex;
 }
 
 .c1 {
@@ -1018,29 +1038,27 @@ exports[`loaded with static state 1`] = `
   text-overflow: ellipsis;
   font-weight: 600;
   font-size: 18px;
-  margin: 0px;
   margin-top: 4px;
   margin-bottom: 4px;
+  margin: 0;
 }
 
 .c2 {
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 0px;
   margin-bottom: 32px;
+  margin: 0;
 }
 
 .c3 {
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 600;
-  margin: 0px;
   margin-bottom: 8px;
+  margin: 0;
 }
 
-.c5 {
-  box-sizing: border-box;
-  display: flex;
+.c7 {
   padding: 8px;
   margin-bottom: 4px;
   width: 300px;
@@ -1049,37 +1067,37 @@ exports[`loaded with static state 1`] = `
   border-radius: 8px;
 }
 
-.c5.disabled {
+.c7.disabled {
   pointer-events: none;
   opacity: 0.5;
 }
 
-.c6 {
+.c8 {
   margin-right: 10px;
   accent-color: #512FC9;
 }
 
-.c6:hover {
+.c8:hover {
   cursor: pointer;
 }
 
-.c7 {
+.c9 {
   width: 250px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.c9 {
+.c11 {
   line-height: normal;
   padding-left: 4px;
 }
 
-.c11 {
+.c13 {
   font-weight: bold;
   letter-spacing: 4px;
 }
 
-.c11:after {
+.c13:after {
   content: ' ';
 }
 
@@ -1106,118 +1124,117 @@ exports[`loaded with static state 1`] = `
     class="c4"
   >
     <div
-      class="c5 disabled"
+      class="c5 c6 c7 disabled"
     >
       <input
         checked=""
-        class="c6"
+        class="c8"
         id="ubunutu0"
         name="ubunutu"
         type="checkbox"
       />
       <label
-        class="c7"
+        class="c9"
         for="ubunutu0"
       >
         ubunutu
       </label>
     </div>
     <div
-      class="c5 disabled"
+      class="c5 c6 c7 disabled"
     >
       <input
         checked=""
-        class="c6"
+        class="c8"
         id="debian1"
         name="debian"
         type="checkbox"
       />
       <label
-        class="c7"
+        class="c9"
         for="debian1"
       >
         debian
       </label>
     </div>
     <div
-      class="c5"
+      class="c5 c6 c7"
     >
       <input
         checked=""
-        class="c6"
+        class="c8"
         id="root0"
         name="root"
         type="checkbox"
       />
       <label
-        class="c7"
+        class="c9"
         for="root0"
       >
         root
       </label>
     </div>
     <div
-      class="c5"
+      class="c5 c6 c7"
     >
       <input
         checked=""
-        class="c6"
+        class="c8"
         id="llama1"
         name="llama"
         type="checkbox"
       />
       <label
-        class="c7"
+        class="c9"
         for="llama1"
       >
         llama
       </label>
     </div>
     <div
-      class="c5"
+      class="c5 c6 c7"
     >
       <input
         checked=""
-        class="c6"
+        class="c8"
         id="george_washington_really_long_name_testing2"
         name="george_washington_really_long_name_testing"
         type="checkbox"
       />
       <label
-        class="c7"
+        class="c9"
         for="george_washington_really_long_name_testing2"
       >
         george_washington_really_long_name_testing
       </label>
     </div>
     <button
-      class="c8 c9"
+      class="c10 c11"
       kind="text"
     >
       <span
-        class="c10 icon icon-add c11"
+        class="c12 icon icon-add c13"
         color="light"
       />
       Add new OS User
     </button>
   </div>
   <div
-    class="c12"
+    class="c14"
   >
     
     <button
-      class="c13"
+      class="c15"
       kind="primary"
       width="165px"
     >
       Next
     </button>
     <a
-      class="c14"
+      class="c16"
       href="/web"
       kind="secondary"
       mt="3"
-      theme="[object Object]"
       width="165px"
     >
       Exit

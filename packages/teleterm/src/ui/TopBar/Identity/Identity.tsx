@@ -7,7 +7,7 @@ import React, {
 } from 'react';
 import styled from 'styled-components';
 import { Box } from 'design';
-import Popover from 'design/Popover';
+import { Popover } from 'design/Popover';
 
 import {
   useKeyboardShortcuts,

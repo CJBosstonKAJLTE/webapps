@@ -20,6 +20,8 @@ import { Close as CloseIcon } from 'design/Icon';
 import { space } from 'design/system';
 import { Flex, Text } from 'design';
 
+import { PropsWithTheme } from 'design/theme';
+
 import JoinedUsers from './JoinedUsers';
 
 export default function TabItem(props: Props) {
@@ -48,7 +50,7 @@ type Props = {
   style: any;
 };
 
-function fromProps({ theme, active }) {
+function fromProps({ theme, active }: PropsWithTheme<StyledTabItemProps>) {
   let styles: Record<any, any> = {
     border: 'none',
     borderRight: `1px solid ${theme.colors.bgTerminal}`,
@@ -71,7 +73,11 @@ function fromProps({ theme, active }) {
   return styles;
 }
 
-const StyledTabItem = styled(Flex)`
+interface StyledTabItemProps {
+  active: boolean;
+}
+
+const StyledTabItem = styled(Flex)<StyledTabItemProps>`
   max-width: 200px;
   height: 100%;
   ${fromProps}

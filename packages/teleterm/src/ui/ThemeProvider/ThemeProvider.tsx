@@ -20,7 +20,7 @@ import { ThemeProvider, StyleSheetManager } from 'styled-components';
 import { AppearanceConfig } from 'teleterm/types';
 
 import { GlobalStyle } from './globals';
-import theme from './theme';
+import { theme } from './theme';
 
 export type TeletermThemeProvider = {
   appearanceConfig?: AppearanceConfig;

@@ -17,7 +17,7 @@ limitations under the License.
 import React from 'react';
 import styled from 'styled-components';
 import { Flex } from 'design';
-import { space, width, color, height } from 'styled-system';
+import { space, width, color, height } from 'design/system';
 
 // Checks for spaces between chars, and
 // captures two named groups: username and host.

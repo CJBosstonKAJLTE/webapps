@@ -16,8 +16,8 @@ limitations under the License.
 
 import React from 'react';
 import styled from 'styled-components';
-import Popover from 'design/Popover';
-import theme from 'design/theme';
+import { Popover } from 'design/Popover';
+import { theme } from 'design/theme';
 import { Box } from 'design';
 import { debounce } from 'lodash';
 

@@ -20,7 +20,11 @@ import ReactSelectAsync from 'react-select/async';
 import styled from 'styled-components';
 import { width, space } from 'design/system';
 
+import { PropsWithTheme } from 'design/theme';
+
 import { Props, AsyncProps } from './types';
+
+import type { SpaceProps, WidthProps } from 'styled-system';
 
 export default function Select(props: Props) {
   const { hasError = false, ...restOfProps } = props;
@@ -59,7 +63,13 @@ export function SelectAsync(props: AsyncProps) {
   );
 }
 
-export const StyledSelect = styled.div`
+interface StyledSelectBaseProps {
+  hasError?: boolean;
+}
+
+export type StyledSelectProps = StyledSelectBaseProps & SpaceProps & WidthProps;
+
+export const StyledSelect = styled.div<PropsWithTheme<StyledSelectProps>>`
   .react-select-container {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.24);
     box-sizing: border-box;

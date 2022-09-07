@@ -2,10 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Text } from 'design';
+import { space } from 'design/system';
 
 import { unique } from 'teleterm/ui/utils/uid';
 
 import { VirtualScroll } from './VirtualScroll';
+
+import type { SpaceProps } from 'design/system';
 
 const items: SimpleItem[] = new Array(10000)
   .fill(null)
@@ -91,14 +94,14 @@ export function TreeList() {
   );
 }
 
-const ClickableItem = styled.span`
+const ClickableItem = styled.span<SpaceProps>`
   visibility: ${props => (props.hidden ? 'hidden' : 'visible')};
-  margin-left: ${props => props.ml};
   font-weight: bold;
   cursor: pointer;
   display: inline-block;
   width: 10px;
   margin-right: 5px;
+  ${space}
 
   &:hover {
     transform: scale(1.5);
