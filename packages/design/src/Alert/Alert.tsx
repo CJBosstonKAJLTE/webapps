@@ -77,7 +77,7 @@ export const Alert = styled.div<AlertProps>`
 `;
 
 interface AlertBaseProps {
-  kind?: 'danger' | 'info' | 'warning' | 'success';
+  kind: 'danger' | 'info' | 'warning' | 'success';
 }
 
 export type AlertProps = React.PropsWithChildren<
