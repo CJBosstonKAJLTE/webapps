@@ -30,7 +30,7 @@ import { Feature } from 'teleport/types';
 import { Main } from './Main';
 import Welcome from './Welcome';
 import Login, { LoginSuccess, LoginFailed } from './Login';
-import AppLauncher from './AppLauncher';
+import { AppLauncher } from './AppLauncher';
 import Console from './Console';
 import DesktopSession from './DesktopSession';
 import { Discover } from './Discover';
