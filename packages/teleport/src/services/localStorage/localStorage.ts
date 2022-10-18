@@ -21,7 +21,7 @@ import { KeysEnum } from './types';
 
 const storage = {
   clear() {
-    window.localStorage.clear();
+    window.sessionStorage.clear();
   },
 
   subscribe(fn) {
@@ -33,11 +33,11 @@ const storage = {
   },
 
   setBearerToken(token: BearerToken) {
-    window.localStorage.setItem(KeysEnum.TOKEN, JSON.stringify(token));
+    window.sessionStorage.setItem(KeysEnum.TOKEN, JSON.stringify(token));
   },
 
   getBearerToken(): BearerToken {
-    const item = window.localStorage.getItem(KeysEnum.TOKEN);
+    const item = window.sessionStorage.getItem(KeysEnum.TOKEN);
     if (item) {
       return JSON.parse(item);
     }
