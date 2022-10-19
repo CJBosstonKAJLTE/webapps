@@ -48,7 +48,7 @@ const service = {
       })
       .then(json => ({
         fqdn: json.fqdn as string,
-        cookieName: json.cookie_name as string,
+        cookieValue: json.cookie_value as string,
       }));
   },
 
