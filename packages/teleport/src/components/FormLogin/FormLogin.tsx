@@ -44,6 +44,7 @@ import {
 import createMfaOptions, { MfaOption } from 'shared/utils/createMfaOptions';
 import { StepSlider, StepComponentProps } from 'design/StepSlider';
 
+import { PrivateKeyPolicyCard } from 'teleport/components/PrivateKeyPolicyCard';
 import { UserCredentials } from 'teleport/services/auth';
 
 import SSOButtonList from './SsoButtons';
@@ -54,7 +55,12 @@ export default function LoginForm(props: Props) {
     attempt,
     isLocalAuthEnabled = true,
     authProviders = [],
+    privateKeyPolicyEnabled,
   } = props;
+
+  if (privateKeyPolicyEnabled) {
+    return <PrivateKeyPolicyCard title={title} />;
+  }
 
   const ssoEnabled = authProviders?.length > 0;
 
@@ -503,6 +509,7 @@ export type Props = {
   title?: string;
   isLocalAuthEnabled?: boolean;
   isPasswordlessEnabled: boolean;
+  privateKeyPolicyEnabled: boolean;
   authProviders?: AuthProvider[];
   auth2faType?: Auth2faType;
   primaryAuthType: PrimaryAuthType;

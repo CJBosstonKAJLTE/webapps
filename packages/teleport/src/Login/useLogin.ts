@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
+import { useState } from 'react';
 import { useAttempt } from 'shared/hooks';
-
 import { AuthProvider } from 'shared/services';
+import { isPrivateKeyPolicyError } from 'shared/utils/errorType';
 
 import history from 'teleport/services/history';
 import cfg from 'teleport/config';
@@ -24,6 +25,12 @@ import auth, { UserCredentials } from 'teleport/services/auth';
 
 export default function useLogin() {
   const [attempt, attemptActions] = useAttempt({ isProcessing: false });
+  // privateKeyPolicyEnabled can be enabled through cluster wide config, or
+  // through a role setting.
+  const [privateKeyPolicyEnabled, setPrivateKeyPolicyEnabled] = useState(
+    cfg.getPrivateKeyPolicy() != 'none'
+  );
+
   const authProviders = cfg.getAuthProviders();
   const auth2faType = cfg.getAuth2faType();
   const isLocalAuthEnabled = cfg.getLocalAuthFlag();
@@ -34,6 +41,9 @@ export default function useLogin() {
       .login(email, password, token)
       .then(onSuccess)
       .catch(err => {
+        if (isPrivateKeyPolicyError(err)) {
+          setPrivateKeyPolicyEnabled(true);
+        }
         attemptActions.error(err);
       });
   }
@@ -44,6 +54,9 @@ export default function useLogin() {
       .loginWithWebauthn(creds)
       .then(onSuccess)
       .catch(err => {
+        if (isPrivateKeyPolicyError(err)) {
+          setPrivateKeyPolicyEnabled(true);
+        }
         attemptActions.error(err);
       });
   }
@@ -67,6 +80,7 @@ export default function useLogin() {
     clearAttempt: attemptActions.clear,
     isPasswordlessEnabled: cfg.isPasswordlessEnabled(),
     primaryAuthType: cfg.getPrimaryAuthType(),
+    privateKeyPolicyEnabled,
   };
 }
 

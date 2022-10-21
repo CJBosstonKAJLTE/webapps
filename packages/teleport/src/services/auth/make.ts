@@ -14,11 +14,20 @@
  * limitations under the License.
  */
 
-import { RecoveryCodes } from './types';
+import { ChangedUserAuthn, RecoveryCodes } from './types';
 
-// makeRecoveryCodes makes the response from a successful user reset or invite.
+// makeChangedUserAuthn makes the response from a successful user reset or invite.
 // Only teleport cloud and users with valid emails as username will receive
 // recovery codes.
+export function makeChangedUserAuthn(json): ChangedUserAuthn {
+  json = json || {};
+
+  return {
+    recovery: makeRecoveryCodes(json.recovery),
+    privateKeyPolicyEnabled: json.privateKeyPolicyEnabled,
+  };
+}
+
 export function makeRecoveryCodes(json): RecoveryCodes {
   json = json || {};
 
